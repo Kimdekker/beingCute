@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1d1f27;
+  }
+
+  /* Grid container for pixel art */
+  section {
+    display: grid;
+    grid-template-columns: repeat(16, 20px);
+    grid-template-rows: repeat(25, 20px);
+    gap: 2px;
+  }
+
+  section h1{
+    grid-column: 1 / 17;
+    grid-row: 24 / 26;
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #ff4d4d;
+    text-align: center;
+  }
+
+  section div {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+  }
+
+  .finger {
+    background-color: #ffffff;
+  }
+
+  .heart {
+    background-color: #ff4d4d;
+    animation: heartbeat 0.8s infinite;
+  }
+
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+  }
